@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\GeneraOrdenesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('/', function () {
 });
 Route::get('/info',[TestController::class,'info'])->name('info');
 Route::post('/info',[TestController::class,'store'])->name('info');
+Route::get('/genera_ordenes', [GeneraOrdenesController::class, 'index'])->name('genera_ordenes.index');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -33,7 +36,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('cursos',CursosController::class);
     Route::resource('users',UsersController::class);
-    
+    Route::post('/genera_ordenes', [GeneraOrdenesController::class, 'genera_ordenes'])->name('genera_ordenes');
     
 });
 
