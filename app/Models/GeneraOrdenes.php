@@ -15,7 +15,7 @@ class GeneraOrdenes extends Model
 
     protected $primaryKey='ord_id';
 
-    public $timestammps=false;
+    public $timestamps=false;
 
     protected $fillable=[
         'mat_id',

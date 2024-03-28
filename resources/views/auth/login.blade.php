@@ -80,8 +80,8 @@
         @csrf
 
         <div class="form-group">
-            <label for="name">Nombre de Usuario</label>
-            <input type="text" id="name" name="name" required autofocus>
+            <label for="username">Nombre de Usuario</label>
+            <input type="text" id="username" name="username" required autofocus>
         </div>
 
         <div class="form-group">

@@ -34,9 +34,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::resource('cursos',CursosController::class);
     Route::resource('users',UsersController::class);
     Route::post('/genera_ordenes', [GeneraOrdenesController::class, 'genera_ordenes'])->name('genera_ordenes');
+    Route::post('/eliminarOrden',[GeneraOrdenesController::class,'eliminarOrden'])->name('eliminarOrden');
     
 });
 
